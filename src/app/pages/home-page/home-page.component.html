@@ -1,0 +1,22 @@
+<section>
+  <div class="home-page flex column align-start">
+    <div class="username-wrapper">
+      <h2>Hello {{user.name}}</h2>
+    </div>
+    <div>
+      <div class="coins-wrapper flex align-center">
+        <img src="../../../assets/imgs/coins.png" alt="coins" />
+        <h2>Coins: ${{user.balance}}</h2>
+      </div>
+    </div>
+    <div class="flex align-center">
+      <img src="../../../assets/imgs/bitcoin.png" alt="bitcoin" />
+      <h2>BTC: {{coinRate}}</h2>
+    </div>
+  </div>
+
+  <div class="move-list-wrapper flex justify-center">
+    <move-list [moves]="userMoves" [title]="'Your last 3 Moves:'"></move-list>
+    <!-- <MovesList class="move-list" showContact={true} title="Your last 3 Moves:" movesList={user.moves.slice(0, 3)} /> -->
+  </div>
+</section>

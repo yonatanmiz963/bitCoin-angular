@@ -1,0 +1,6 @@
+<section>
+  <form class="contact-filter flex align-center">
+    <label for="name">Search</label>
+    <input type="text" id="name" name="term" [(ngModel)]="filterBy.term" (ngModelChange)="onSetFilter()">
+  </form>
+</section>

@@ -1,0 +1,27 @@
+<section>
+  <div class="btn-wrapper flex space-between align-center">
+    <a title="Back" class="back-btn" routerLink="/"><img src="../../../assets/imgs/back.png" /></a>
+    <button title="Delete" class="delete-btn" (click)="onRemoveContact()"><img src="../../../assets/imgs/delete.png" /></button>
+  </div>
+
+  <form (submit)="onSaveContact()" class="contact-edit">
+    <div class="name-wrapper">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" [(ngModel)]="contact.name">
+    </div>
+
+
+    <div class="email-wrapper">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" [(ngModel)]="contact.email">
+    </div>
+
+    <div class="phone-wrapper">
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" id="phone" [(ngModel)]="contact.phone">
+    </div>
+
+    <button class="save-btn" title="Save"><img src="../../../assets/imgs/plus.png" /></button>
+  </form>
+
+</section>

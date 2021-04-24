@@ -1,0 +1,28 @@
+@import "../../../assets/styles/setup/variables";
+
+
+
+.contact-filter {
+
+  label:not(:first-of-type) {
+    margin-inline-start: 12px;
+  }
+
+  input,
+  select {
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-inline-start: 6px;
+    margin-inline-end: 15px;
+  }
+
+}
+
+
+@media(max-width: $break-normal) {
+  .contact-filter {
+    margin-block-end: 10px;
+  }
+}

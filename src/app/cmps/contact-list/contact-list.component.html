@@ -1,0 +1,7 @@
+<section>
+  <div class="contact-list flex">
+    <a class="contact-preview-li" *ngFor="let contact of contacts;index as idx" [trackBy]="trackByFn" [routerLink]="['/contact',contact._id]">
+      <contact-preview [contact]="contact"></contact-preview>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<div class="contact-details flex column justify-center align-center">
+  <div class="btn-wrapper flex space-between align-center">
+    <!-- <a routerLink="/">Back</a> -->
+    <a title="Back" routerLink="/"><img src="../../../assets/imgs/back.png" /></a>
+    <!-- <a [routerLink]="['/edit',contact._id]">Edit</a> -->
+    <a title="Edit" [routerLink]="['/edit',contact._id]"><img src="../../../assets/imgs/edit.png" /></a>
+  </div>
+  <div class="details-wrapper">
+    <img src="../../../assets/imgs/contact.png" alt="contact" />
+    <h2>{{contact.name}}</h2>
+    <h3>{{contact.email}}</h3>
+    <h3>{{contact.phone}}</h3>
+  </div>
+  <div class="transfer-wrapper">
+    <transfer-fund [contact]="contact"></transfer-fund>
+  </div>
+  <div *ngIf="user.moves.length > 0" class="move-list-wrapper">
+    <move-list [moves]="contactMoves" [title]="'Your Moves:'"></move-list>
+  </div>
+</div>

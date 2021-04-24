@@ -1,0 +1,8 @@
+<section class="transfer">
+  <h3>Transfer coins to {{contact.name}}</h3>
+  <div>
+    <label for="amount">Amount</label>
+    <input type="number" name="amount" id="amount" [(ngModel)]="move.amount">
+  </div>
+  <button (click)="onTransferCoins()">Transfer</button>
+</section>
